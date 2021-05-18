@@ -2,7 +2,7 @@ import React from 'react';
 import { useBasket } from '../contexts/basketContext';
 import Link from 'next/link';
 import Image from 'next/image';
-import { faShoppingCart, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from '../styles/Home.module.css';
 
@@ -27,10 +27,10 @@ export default function Header() {
           <Image 
           src='/logo-deli.png' 
           width={200} 
-          height={90} />
+          height={90}
+          alt="Restaurant´s logo. A bowl with chopsticks holding up noodles and with restaurant´s name, Delicious beside the noodles bowl"
+          />
         </div>
       </header>
     )
 };
-
-

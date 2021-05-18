@@ -11,21 +11,25 @@ function FoodList({ food, errors }) {
     basket.addProductLine(item);
   };
 
-
+  
   return (
     <div className={styles.container}>
     <Header/>
     <main className={styles.main}>
+  
     <h1> A TASTE OF THAI TO GO</h1>
-    
+
     <section className={styles.foodMenu}>
-      
         <ul className={styles.menu}>
         {food && food.map(item => {
             return (
                 <li key={item.id}>
                   <h2>{item.Name}</h2>
-                  <img src={item.image} width="300px" height="220px" />
+                  <img 
+                  src={item.image} 
+                  alt={item.alt}
+                  width="300px" 
+                  height="220px" />
                   <h3>{item.Price} NOK </h3>
                   <p>Ingredients: {item.Ingredients}</p>
                   <button type="submit" onClick={() => {
@@ -62,4 +66,3 @@ FoodList.getInitialProps = async () => {
 };
 
 export default FoodList;
-
